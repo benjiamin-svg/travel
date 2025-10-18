@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Request System</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app-container">
+      <!-- Login Section -->
+      <section id="login-section" class="card">
+        <h2>Login</h2>
+        <p class="description">
+          Employees must use a company email address that has been registered by an administrator. Admins can log in using the default
+          username/password. New employees must ask an admin to add their email before they can log in.
+        </p>
+        <div id="google-login" class="form-row">
+          <!-- Company email sign‑in simulation -->
+          <button type="button" id="google-login-btn">Login with Company Email</button>
+        </div>
+        <form id="login-form">
+          <div class="form-row">
+            <label for="login-email">Admin username:</label>
+            <input type="text" id="login-email" placeholder="admin" />
+          </div>
+          <div class="form-row">
+            <label for="login-password">Admin password:</label>
+            <input type="password" id="login-password" placeholder="admin" />
+          </div>
+          <div class="button-row">
+            <button type="submit">Admin Login</button>
+          </div>
+        </form>
+        <p class="footnote">Employees click “Login with Company Email” to authenticate using your registered company email address after your email has been added by an admin. Admins use the fields above.</p>
+      </section>
+
+
+      <!-- Main Application Section -->
+      <section id="app-section" class="hidden">
+        <header>
+          <h1>Travel Request System</h1>
+          <div id="user-info"></div>
+          <button id="logout-button" class="secondary small">Logout</button>
+        <!-- Language selector -->
+        <select id="language-select" class="small">
+          <option value="en">English</option>
+          <option value="zh">简体中文</option>
+          <option value="fr">Français</option>
+          <option value="es">Español</option>
+        </select>
+        </header>
+        <nav id="nav-bar"></nav>
+        <main id="page-content"></main>
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,278 @@
+/* Basic reset and typography */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+h1,
+h2 {
+  margin: 0 0 0.5em;
+  font-weight: normal;
+}
+
+p {
+  margin: 0.5em 0;
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+/* Override link hover inside app container */
+#app-container a:hover {
+  text-decoration: underline;
+}
+
+/* Container and card styles */
+#app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Form styles */
+.form-row {
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Inline form row: label and input on the same line */
+.form-row.inline {
+  flex-direction: row;
+  align-items: center;
+}
+.form-row.inline label {
+  margin-bottom: 0;
+  margin-right: 6px;
+  white-space: nowrap;
+}
+.form-row label {
+  margin-bottom: 4px;
+}
+.form-row input,
+.form-row textarea,
+.form-row select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.form-row input.invalid {
+  border-color: #dc3545;
+  background-color: #fddede;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.button-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #0066cc;
+  color: #fff;
+}
+button.secondary {
+  background-color: #ccc;
+  color: #333;
+}
+button.small {
+  font-size: 12px;
+  padding: 4px 8px;
+}
+
+button:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+button:disabled {
+  background-color: #eee;
+  color: #999;
+  cursor: not-allowed;
+}
+
+/* Ensure table headers and important cells do not wrap */
+th {
+  white-space: nowrap;
+}
+td button {
+  white-space: nowrap;
+}
+
+/* Make tables responsive */
+@media (max-width: 600px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+  }
+  table thead, table tbody, table tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+  th, td {
+    white-space: nowrap;
+  }
+}
+
+/* Delete icon styling for manage users */
+.delete-icon {
+  color: #d9534f; /* bootstrap-like danger red */
+}
+
+/* Utility class to prevent wrapping */
+.nowrap {
+  white-space: nowrap;
+}
+
+/* Header and nav */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+#nav-bar {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+#nav-bar button {
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+#nav-bar button.active {
+  background-color: #0066cc;
+  color: #fff;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 14px;
+}
+th {
+  background-color: #f7f7f7;
+}
+
+/* Form grouping for sections */
+.section-title {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .button-row {
+    flex-direction: column;
+    gap: 4px;
+  }
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+/* Compact form layout */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.row .form-row {
+  flex: 1;
+  margin-bottom: 0;
+}
+.row .form-row label {
+  margin-bottom: 4px;
+}
+
+/* Distinct blocks for flight and hotel sections */
+.section-block {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 16px;
+  background-color: #fafafa;
+}
+
+/* Wrap an input and its edit icon in a flex container */
+.input-edit {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.input-edit input {
+  flex: 1;
+}
+.edit-icon {
+  cursor: pointer;
+  font-size: 16px;
+  user-select: none;
+}
+
+/* Icon styling */
+.icon {
+  margin-right: 6px;
+}
+
+/* Footnote text styling */
+.footnote {
+  font-size: 12px;
+  color: #666;
+  margin-top: 8px;
+}
+
+/* Inline footnote text used next to labels */
+.footnote-inline {
+  font-size: 12px;
+  color: #666;
+  margin-left: 4px;
+}
+
+/* Filter container styling */
+.filters {
+  margin-bottom: 16px;
+}
